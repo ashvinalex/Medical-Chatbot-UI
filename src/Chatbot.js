@@ -39,13 +39,20 @@ try {
   return (
     <div className="chatbot-container">
       <div className="chatbot-messages">
+      
         {messages.map((message, index) => (
-          <div
-            key={index}
-            className={`message ${message.user ? 'user-message' : 'ai-message'}`}>
-
-            {message.text}
+         
+         <div
+          
+          key={index}
+          className={`message ${message.user ? 'user-message' : 'ai-message'}`}>
+          <div className="message-tag">
+            {message.user ? 'User' : 'Bot'}
           </div>
+         {message.text}
+         
+          
+        </div>
         ))}
       </div>
       <form className="chatbot-input-form" onSubmit={handleSubmit}>
@@ -53,7 +60,7 @@ try {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Type your message..."
+          placeholder="Enter your query"
         />
         <button type="submit">Send</button>
       </form>
