@@ -6,8 +6,8 @@ function App() {
   return (
     <div>
 
-    <div class="topnav">
-    <a class="active" href="home">Medical Chatbot</a>
+    <div className="topnav">
+    <a className="active" href="home">Medical Chatbot</a>
     </div>
       <Chatbot />
     </div>
