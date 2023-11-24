@@ -7,7 +7,7 @@ function App() {
     <div>
 
     <div className="topnav">
-    <a className="active" href="home">Medical Chatbot</a>
+    <a className="active" href="home">DocBot</a>
     </div>
       <Chatbot />
     </div>
