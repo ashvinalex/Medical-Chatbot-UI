@@ -71,7 +71,6 @@ jobs:
                 "clientSecret": "${{ secrets.AZURE_CLIENT_SECRET }}"
               }
           
-
   deploy:
     permissions:
       contents: none
