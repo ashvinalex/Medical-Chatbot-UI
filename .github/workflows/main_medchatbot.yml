@@ -9,8 +9,10 @@ on:
       - main
   workflow_dispatch:
   
-env: 
+env:
+  AZURE_WEBAPP_PACKAGE_PATH: '.'
   HOST: 'https://python-flask-webapp-medchat2.azurewebsites.net/'
+  NODE_VERSION: '20.x'
   
 
 jobs:
@@ -63,3 +65,4 @@ jobs:
           app-name: 'MedChatbot'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_613A2D70D3AB4C6F98973453F74299C3 }}
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
