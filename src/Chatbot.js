@@ -8,7 +8,7 @@ const Chatbot = () => {
 
 const chatWithGPT3 = async (userInput) => {
     const apiUrl = process.env.HOST;
-    const apiEndpoint = `https://python-flask-webapp-medchat2.azurewebsites.net//v1/api`;
+    const apiEndpoint = `https://python-flask-webapp-medchat2.azurewebsites.net/v1/api`;
     const headers = {
       'Content-Type': 'application/json',
     };
