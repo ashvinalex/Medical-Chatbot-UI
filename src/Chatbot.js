@@ -7,7 +7,8 @@ const Chatbot = () => {
   const [messages, setMessages] = useState([]);
 
 const chatWithGPT3 = async (userInput) => {
-    const apiEndpoint = {host}'/v1/api';
+    const apiUrl = process.env.HOST;
+    const apiEndpoint = `${apiUrl}/v1/api`;
     const headers = {
       'Content-Type': 'application/json',
     };
