@@ -11,6 +11,7 @@ on:
   
 env: 
   HOST: 'https://python-flask-webapp-medchat2.azurewebsites.net/'
+  
 
 jobs:
   build:
@@ -61,5 +62,4 @@ jobs:
         with:
           app-name: 'MedChatbot'
           slot-name: 'Production'
-          package: release.zip
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_613A2D70D3AB4C6F98973453F74299C3 }}
