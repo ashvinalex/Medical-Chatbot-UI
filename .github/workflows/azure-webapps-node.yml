@@ -59,17 +59,6 @@ jobs:
       with:
         name: node-app
         path: release.zip
-
-    - name: 'Log into Azure using github secret AZURE_CREDENTIALS'
-      uses: Azure/login@v1
-      with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-          enable-AzPSSession: true
-
-    - name: 'Run az commands'
-      run: |
-          az account show
-          az group list
           
   deploy:
     permissions:
@@ -85,6 +74,12 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: node-app
+        
+    - name: 'Log into Azure using github secret AZURE_CREDENTIALS'
+      uses: Azure/login@v1
+      with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          enable-AzPSSession: true     
 
     - name: 'Deploy to Azure WebApp'
       id: deploy-to-webapp
